@@ -49,8 +49,6 @@ class Game(ModelBase):
     status  = models.CharField(max_length=1, choices=STATUS_CHOICES, default=ACTIVE)
     stage   = models.IntegerField(max_length=2, default=1)
 
-    lastCard = models.ForeignKey('Card')
-
 
 class Card(ModelBase):
     game    = models.ManyToManyField('Game')
