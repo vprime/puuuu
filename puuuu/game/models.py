@@ -3,9 +3,8 @@ from datetime import datetime
 from django.contrib import auth
 from django.db import models
 
-from django.contrib.contenttypes.fields import GenericForeignKey
 from django.contrib.contenttypes.models import ContentType
-from django.contrib.contenttypes.generic import GenericRelation
+from django.contrib.contenttypes.generic import GenericRelation, GenericForeignKey
 
 User = auth.get_user_model()
 
@@ -65,7 +64,7 @@ class Card(ModelBase):
         if self.order % 2 == 0:
             return True
         return False
-        
+
     class Meta:
         ordering = ('order',)
 
