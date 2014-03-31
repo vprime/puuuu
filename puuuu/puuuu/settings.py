@@ -36,7 +36,12 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
+    # Database migration
     'south',
+
+    # Core game
+    'game',
 )
 
 MIDDLEWARE_CLASSES = (
